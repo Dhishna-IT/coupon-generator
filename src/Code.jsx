@@ -18,7 +18,7 @@ const Code = () => {
   React.useEffect(() => {
     const fetchCoupon = async() => {
       try {
-        const res = await axios.get('http://localhost:5000/api/v1/coupon')
+        const res = await axios.get('https://ar-backend-7a3f65dd5c44.herokuapp.com/api/v1/coupon')
         console.log(res.data.result)
         if(!res.data.result.includes(codeMap[code])){
           window.alert('Sorry! Coupon already taken')
@@ -26,7 +26,7 @@ const Code = () => {
           setDisplay(true)
         }
         localStorage.setItem('coupon', code)
-        await axios.delete(`http://localhost:5000/api/v1/coupon/${codeMap[code]}`)
+        await axios.delete(`https://ar-backend-7a3f65dd5c44.herokuapp.com/api/v1/coupon/${codeMap[code]}`)
       } catch (error) {
         console.log(error)
       }
