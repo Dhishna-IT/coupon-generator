@@ -6,7 +6,7 @@ const Code = () => {
   const {code} = useParams()
   const [display, setDisplay] = React.useState(false)
   const codeMap = {
-    '1023': 'food0',
+    '1449': 'food0',
     '1123': 'food1',
     '1223': 'food2',
     '1323': 'food3',
